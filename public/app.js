@@ -22,7 +22,7 @@ function createCard(article) {
 
     //var cardBody = $("<div class='card-body'>").text(article.summary);
     var cardBody = $("<div class='card-body'>").html("<p data-id='" + article._id + "'>" +article.title + "</p>")
-    var cardImage = `<img class='card-img-top' src=${article.image}>`
+    var cardImage = `<img class='card-img-top responsive' src=${article.image}>`
     card.append(cardImage, cardHeader, cardBody);
     // We attach the article's id to the jQuery element
     // We will use this when trying to figure out which article the user wants to save
