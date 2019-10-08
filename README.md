@@ -14,6 +14,13 @@ Simply go to the site, click on the `Scrape Articles` button and enjoy!
 
 Users can also leave notes that are stored in a Mongo database along with the article headlines, links and the link to the accompanying picture.
 
+### To do
+
+- [ ] Implement handlebars for the header Navbar and footer
+- [ ] Add a delete button to the Notes
+- [ ] Change the look of the display window to something with a more horizontal look (tables perhaps)
+- [ ] Find a way to scrape the archives which are in their /news section.
+
 ### Helpful Links
 
 * [MongoDB Documentation](https://docs.mongodb.com/manual/)
