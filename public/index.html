@@ -73,19 +73,35 @@
       display: flex;
       flex: 1 1 auto;
     }
-    
+
     .responsive {
       max-width: 100%;
       height: auto;
     }
-    
   </style>
 </head>
 
 <body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+    <a class="navbar-brand" href="#">Bee Scraper</a>
+    <ul class="navbar-nav">
+      <a class="nav-link active" href="#">Home</a>
+      <li class="nav-item">
+        <!--<a class="nav-link" href="#">Link</a> -->
+        <button class="btn btn-danger navbar-btn mx-2" onclick="scrapeArticles()">Scrape</button>
+        
+      </li>
+      <li class="nav-item">
+        <!-- <a class="nav-link" href="#">Link</a> -->
+        <!-- <button class="btn btn-info navbar-btn mx-2" onclick="">View Articles in JSON Format</button> -->
+        <a href="/articles" class="btn btn-info navbar-btn mx-2">View Articles in JSON Format</a>
+      </li>
+    </ul>
+  </nav>
+
   <div id="wrapper">
-    <h1>Babylon Bee Scraper</h1>
-    <h2><i>Just as fake as CNN but a lot more fun!</i></h2>
+    <h1 class="text-white">Babylon Bee Scraper</h1>
+    <h2 class="text-white"><i>Just as fake as CNN but a lot more fun!</i></h2>
     <div id="articles"></div>
     <div id="notes"></div>
   </div>
