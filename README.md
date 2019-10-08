@@ -10,6 +10,9 @@ You can view it on Heroku [here](https://serene-tor-60866.herokuapp.com/).
 
 Users can leave notes that are stored in a Mongo database along with the article headlines, links and the link to the accompanying picture.
 
+***BEWARE!!!*** Snopes thinks this site is the wrong kind of satire!  They obviously prefer secular, liberal and pagan sites such as TheOnion.
+
+
 ### Helpful Links
 
 * [MongoDB Documentation](https://docs.mongodb.com/manual/)
