@@ -115,12 +115,13 @@ img2 {
         <div class="modal-body text-dark text-left">
           <p>The form below contains a textarea for comments:</p>
 
-  <form action="/action_page.php">
+  <!-- <form action="/action_page.php"> -->
+  <form >
     <div class="form-group">
       <label for="comment"></label>
-      <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+      <textarea id="noteBodyText" class="form-control" rows="5" id="comment" name="text"></textarea>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button id="saveNote" type="submit" class="btn btn-primary">Submit</button>
   </form>
 
         </div>
@@ -189,18 +190,46 @@ $.each(myJSON, function(key, obj) {
 
 $("#myModal").on("show.bs.modal", function(e) {
 
-  var buttonId = $(e.relatedTarget).attr("data-id");
-  console.log("buttonId: " + buttonId)
+  var buttonDataId = $(e.relatedTarget).attr("data-id");
+  console.log("buttonDataId: " + buttonDataId)
 
   // use the id to find the note for the object
-  var result = myJSON.find(x => x._id == buttonId).headlineTitle
+  var result = myJSON.find(x => x._id == buttonDataId).headlineTitle
 
   $(this).find("#noteArticleTitle").empty()
   $(this).find("#noteArticleTitle").text(result)
-  
-  
+
+  // need to set the data-id of the SUBMIT button (id: saveNote)
+  $("#saveNote").attr("data-id", buttonDataId)
 
   
+})
+
+// When you click the savenote button
+$(document).on("click", "#saveNote", function (event) {
+
+  event.preventDefault()
+
+  // Grab the data-id associated with the article from the submit button
+  var thisId = $(this).attr("data-id");
+  console.log("save button data-id: " + thisId)
+
+  var tempString = $("#noteBodyText").val()
+  if (tempString != "") {
+
+    console.log("tempstring: " + tempString)
+
+    var result = myJSON.find(x => x._id == thisId)
+
+    console.log("result obj: " +  result)
+
+    console.log("result note")
+
+    result.note = tempString
+  } else {
+    alert("Note cannot be empty.  canceling")
+  }
+
 })
 
 
