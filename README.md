@@ -6,14 +6,13 @@ This is a web application that lets users view and leave comments on the latest 
 
 You can view it on Heroku [here](https://serene-tor-60866.herokuapp.com/).
 
+***BEWARE!!!*** Snopes thinks this site is the wrong kind of satire!  They obviously prefer secular, liberal and pagan sites such as TheOnion.
+
 ### Usage
 
 Simply go to the site, click on the `Scrape Articles` button and enjoy!
 
 Users can also leave notes that are stored in a Mongo database along with the article headlines, links and the link to the accompanying picture.
-
-***BEWARE!!!*** Snopes thinks this site is the wrong kind of satire!  They obviously prefer secular, liberal and pagan sites such as TheOnion.
-
 
 ### Helpful Links
 
